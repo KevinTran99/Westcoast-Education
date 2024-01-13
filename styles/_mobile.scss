@@ -1,0 +1,29 @@
+header {
+  padding: 15px 20px;
+  background-color: black;
+  position: fixed;
+  width: 100%;
+}
+
+.nav-header {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#menu-btn {
+  background-color: white;
+}
+
+.nav-link {
+  color: white;
+  list-style: none;
+  margin: 25px 0;
+  border-bottom: 2px solid white;
+  width: 8rem;
+}
+
+a {
+  text-decoration: none;
+}

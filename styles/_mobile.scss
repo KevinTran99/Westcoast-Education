@@ -1,3 +1,9 @@
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
 header {
   padding: 15px 20px;
   background-color: black;
@@ -44,15 +50,13 @@ a {
 }
 
 .main-area {
-  position: relative;
   background-image: url('../images/frontpage.jpg');
   background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
-  top: 70px;
+  margin-top: 70px;
   min-height: calc(100vh - 70px);
   display: flex;
-  flex-direction: column;
   text-align: center;
 }
 

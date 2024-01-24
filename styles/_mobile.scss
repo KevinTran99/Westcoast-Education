@@ -2,6 +2,7 @@ header {
   padding: 15px 20px;
   background-color: black;
   position: fixed;
+  z-index: 999;
   width: 100%;
 }
 
@@ -10,6 +11,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 40px;
 }
 
 #menu-btn {
@@ -39,4 +41,21 @@ a {
 
 .nav-open {
   height: 100vh;
+}
+
+.main-area {
+  position: relative;
+  background-image: url('../images/frontpage.jpg');
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 70px;
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.container {
+  padding-top: 20vh;
 }

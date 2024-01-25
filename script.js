@@ -2,7 +2,7 @@ import { createCard } from './dom.js';
 const menubtn = document.querySelector('#menu-btn');
 const nav = document.querySelector('.nav-links');
 
-const gallery = document.querySelector('#popular-courses');
+const gallery = document.querySelector('#courses-gallery');
 
 async function initPage() {
   const courses = await loadCourses();

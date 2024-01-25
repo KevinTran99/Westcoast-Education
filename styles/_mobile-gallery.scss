@@ -1,0 +1,23 @@
+#courses-gallery {
+  top: 70px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: space-around;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.course-image img {
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+
+.course-image p {
+  text-align: center;
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0.7rem;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}

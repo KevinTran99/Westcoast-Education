@@ -17,8 +17,7 @@ const createImage = (imageUrl, id) => {
 
 const createCourseInfo = (course) => {
   const paragraph = document.createElement('p');
-  paragraph.appendChild(document.createTextNode(`${course.course}`));
-
+  paragraph.innerHTML = `${course.course}<br>Location: ${course.location}<br>Duration: ${course.duration}<br>Course Number: ${course.courseNumber}<br>Starts from: ${course.courseDate}`;
   return paragraph;
 };
 

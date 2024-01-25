@@ -76,7 +76,7 @@ a {
   background-color: #d5d3d3;
   color: black;
   padding: 1rem;
-  padding-top: rem;
+  padding-top: 2rem;
   padding-bottom: 2rem;
 }
 
@@ -120,4 +120,11 @@ footer {
   background-color: black;
   color: white;
   padding-bottom: 1rem;
+}
+
+@media (min-width: 1200px) {
+  .info-area {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

@@ -71,27 +71,53 @@ a {
   padding: 1rem;
 }
 
-.popular-gallery {
+.school-info {
+  text-align: center;
+  background-color: #d5d3d3;
+  color: black;
+  padding: 1rem;
+  padding-top: rem;
   padding-bottom: 2rem;
 }
 
-.description-popular {
+.courses-info {
   text-align: center;
-  background-color: black;
+  background-color: #333;
   color: white;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.location-info {
+  text-align: center;
+  background-color: #d5d3d3;
+  color: black;
+  padding: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .btn {
   display: flex;
   justify-content: center;
   font-size: larger;
+  color: black;
+  background: #d5d3d3;
+  margin-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 footer {
   text-align: center;
   background-color: black;
   color: white;
-  padding: 0.2rem;
+  padding-bottom: 1rem;
 }

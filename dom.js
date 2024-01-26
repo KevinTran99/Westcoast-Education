@@ -21,4 +21,20 @@ const createCourseInfo = (course) => {
   return paragraph;
 };
 
-export { createCard };
+const getElement = (elementId) => document.getElementById(elementId);
+
+const showElement = (elementId) => {
+  const element = getElement(elementId);
+  if (element) element.style.display = 'block';
+};
+
+const hideElement = (elementId) => {
+  const element = getElement(elementId);
+  if (element) element.style.display = 'none';
+};
+
+const getElementValue = (elementId) => getElement(elementId)?.value || null;
+
+const showAlert = (message) => alert(message);
+
+export { createCard, showElement, hideElement, getElementValue, showAlert };

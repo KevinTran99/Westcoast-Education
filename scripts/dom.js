@@ -59,11 +59,17 @@ const initializeForm = () => {
 
     const existingData = JSON.parse(localStorage.getItem('courseApplications')) || [];
 
-    existingData.push(formData);
+    const isDuplicate = existingData.some((data) => {
+      return data.email === formData.email && data.courseNumber === formData.courseNumber;
+    });
 
-    localStorage.setItem('courseApplications', JSON.stringify(existingData));
-
-    form.reset();
+    if (!isDuplicate) {
+      existingData.push(formData);
+      localStorage.setItem('courseApplications', JSON.stringify(existingData));
+      form.reset();
+    } else {
+      alert('This email and courseNumber combination has already been submitted.');
+    }
   });
 };
 

@@ -30,11 +30,21 @@
   cursor: pointer;
 }
 
-#register-button,
-#close-register-button {
+#register-button {
   width: 7rem;
   margin: 0 auto;
   margin-top: 1rem;
+  background-color: dodgerblue;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#close-register-button {
+  width: 7rem;
+  margin: 0 auto;
   background-color: dodgerblue;
   color: #fff;
   padding: 10px;

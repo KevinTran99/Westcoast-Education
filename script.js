@@ -24,11 +24,19 @@ const loadCourses = async () => {
     const result = await response.json();
     return result;
   }
+
+  const adminUser = { username: 'admin', password: 'admin' };
+  localStorage.setItem('admin', JSON.stringify(adminUser));
 };
 
 const performAction = (action, usernameId, passwordId, containerToShow, containerToHide) => {
   const username = getElementValue(usernameId);
   const password = getElementValue(passwordId);
+
+  if (username === 'admin' && password === 'admin') {
+    window.location.href = '/pages/add-courses.html';
+    return;
+  }
 
   const storedUser = localStorage.getItem(username);
 

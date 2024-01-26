@@ -4,6 +4,10 @@ const menubtn = document.querySelector('#menu-btn');
 const nav = document.querySelector('.nav-links');
 const gallery = document.querySelector('#courses-gallery');
 
+menubtn.addEventListener('click', () => {
+  nav.classList.toggle('nav-open');
+});
+
 async function initPage() {
   const courses = await loadCourses();
 
@@ -40,9 +44,13 @@ const performAction = (action, usernameId, passwordId, containerToShow, containe
   } else {
     const newUser = { username, password };
     localStorage.setItem(username, JSON.stringify(newUser));
-    showAlert(`${action} successful!`);
+
     hideElement(containerToHide);
     showElement(containerToShow);
+
+    if (action === 'Login') {
+      window.location.href = '/pages/booking.html';
+    }
   }
 };
 
@@ -67,9 +75,6 @@ document.getElementById('register-form').addEventListener('submit', (event) => {
   register();
 });
 
-menubtn.addEventListener('click', () => {
-  nav.classList.toggle('nav-open');
-});
 document.addEventListener('DOMContentLoaded', initPage);
 document.getElementById('register-button').addEventListener('click', showRegisterForm);
 document.getElementById('close-register-button').addEventListener('click', hideRegisterForm);

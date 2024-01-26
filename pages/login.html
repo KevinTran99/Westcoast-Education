@@ -38,15 +38,27 @@
       </nav>
     </header>
 
-    <main>
+    <main class="login-wrapper">
         <section class="login-container">
-            <h2>Login</h2>
+            <h2>Login To Book a Course</h2>
             <form id="login-form">
                 <label for="login-username">Username:</label>
                 <input type="text" id="login-username" required>
                 <label for="login-password">Password:</label>
                 <input type="password" id="login-password" required>
-                <button type="button" onclick="login()">Login</button>
+                <button class="loginbtn" type="button" onclick="login()">Login</button>
+            </form>
+            <button id="register-button" onclick="showRegisterForm()">Register</button>
+        </section>
+
+        <section class="register-container">
+            <form action="register-form">
+                <label for="register-username">Username:</label>
+                <input type="text" id="register-username" required>
+                <label for="register-password">Password:</label>
+                <input type="password" id="register-password" required>
+                <button type="button" onclick="register()">Register</button>
+                <button type="button" onclick="hideRegisterForm()">Go Back</button>
             </form>
         </section>
     </main>

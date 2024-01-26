@@ -11,7 +11,12 @@
       crossorigin="anonymous"
     ></script>
     <script
-      src="/script.js"
+      src="/scripts/header.js"
+      type="module"
+      defer
+    ></script>
+    <script
+      src="/scripts/login.js"
       type="module"
       defer
     ></script>
@@ -39,30 +44,60 @@
     </header>
 
     <main class="login-wrapper">
-        <section id="login-container">
-            <h2>Login To Book a Course</h2>
-            <form id="login-form">
-                <label for="login-username">Username:</label>
-                <input type="text" id="login-username" required>
-                <label for="login-password">Password:</label>
-                <input type="password" id="login-password" required>
-                <button class="loginbtn" type="submit">Login</button>
-            </form>
-            <button id="register-button">Register</button>
-        </section>
+      <section id="login-container">
+        <h2>Login To Book a Course</h2>
+        <form id="login-form">
+          <label for="login-username">Username:</label>
+          <input
+            type="text"
+            id="login-username"
+            required
+          />
+          <label for="login-password">Password:</label>
+          <input
+            type="password"
+            id="login-password"
+            required
+          />
+          <button
+            class="loginbtn"
+            type="submit"
+          >
+            Login
+          </button>
+        </form>
+        <button id="register-button">Register</button>
+      </section>
 
-        <section id="register-container">
-            <h2>Register</h2>
-            <form id="register-form">
-                <label for="register-username">Username:</label>
-                <input type="text" id="register-username" required>
-                <label for="register-password">Password:</label>
-                <input type="password" id="register-password" required>
-                <button class="regbtn" type="submit">Register</button>
-                <button type="button" id="close-register-button">Go Back</button>
-            </form>
-        </section>
+      <section id="register-container">
+        <h2>Register</h2>
+        <form id="register-form">
+          <label for="register-username">Username:</label>
+          <input
+            type="text"
+            id="register-username"
+            required
+          />
+          <label for="register-password">Password:</label>
+          <input
+            type="password"
+            id="register-password"
+            required
+          />
+          <button
+            class="regbtn"
+            type="submit"
+          >
+            Register
+          </button>
+          <button
+            type="button"
+            id="close-register-button"
+          >
+            Go Back
+          </button>
+        </form>
+      </section>
     </main>
-
   </body>
 </html>

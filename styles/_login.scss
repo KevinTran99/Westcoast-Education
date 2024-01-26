@@ -15,13 +15,19 @@
   width: 14rem;
   margin: 0 auto;
   margin-top: 1rem;
+  gap: 15px;
 }
 
 .loginbtn,
 .regbtn {
   margin: 0 auto;
-  margin-top: 1rem;
   width: 7rem;
+  background-color: dodgerblue;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 #register-button,
@@ -29,6 +35,12 @@
   width: 7rem;
   margin: 0 auto;
   margin-top: 1rem;
+  background-color: dodgerblue;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 #register-container {

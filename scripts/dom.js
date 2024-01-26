@@ -37,4 +37,34 @@ const getElementValue = (elementId) => getElement(elementId)?.value || null;
 
 const showAlert = (message) => alert(message);
 
-export { createCard, showElement, hideElement, getElementValue, showAlert };
+const initializeForm = () => {
+  const form = document.getElementById('course-application-form');
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const paymentAddress = document.getElementById('payment-address').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const courseNumber = document.getElementById('courseNumber').value;
+
+    const formData = {
+      name,
+      paymentAddress,
+      email,
+      phone,
+      courseNumber,
+    };
+
+    const existingData = JSON.parse(localStorage.getItem('courseApplications')) || [];
+
+    existingData.push(formData);
+
+    localStorage.setItem('courseApplications', JSON.stringify(existingData));
+
+    form.reset();
+  });
+};
+
+export { createCard, showElement, hideElement, getElementValue, showAlert, initializeForm };

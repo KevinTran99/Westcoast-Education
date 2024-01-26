@@ -39,26 +39,27 @@
     </header>
 
     <main class="login-wrapper">
-        <section class="login-container">
+        <section id="login-container">
             <h2>Login To Book a Course</h2>
             <form id="login-form">
                 <label for="login-username">Username:</label>
                 <input type="text" id="login-username" required>
                 <label for="login-password">Password:</label>
                 <input type="password" id="login-password" required>
-                <button class="loginbtn" type="button" onclick="login()">Login</button>
+                <button class="loginbtn" type="submit">Login</button>
             </form>
-            <button id="register-button" onclick="showRegisterForm()">Register</button>
+            <button id="register-button" >Register</button>
         </section>
 
-        <section class="register-container">
-            <form action="register-form">
+        <section id="register-container">
+            <h2>Register</h2>
+            <form id="register-form">
                 <label for="register-username">Username:</label>
                 <input type="text" id="register-username" required>
                 <label for="register-password">Password:</label>
                 <input type="password" id="register-password" required>
-                <button type="button" onclick="register()">Register</button>
-                <button type="button" onclick="hideRegisterForm()">Go Back</button>
+                <button class="regbtn" type="submit">Register</button>
+                <button type="button" id="close-register-button">Go Back</button>
             </form>
         </section>
     </main>

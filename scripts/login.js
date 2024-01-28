@@ -29,6 +29,9 @@ const performAction = (action, usernameId, passwordId, containerToShow, containe
 
     if (action === 'Login') {
       window.location.href = '/pages/booking.html';
+    } else if (action === 'Registration') {
+      window.alert('Registration successful');
+      window.location.href = '/pages/login.html';
     }
   }
 };

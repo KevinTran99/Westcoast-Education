@@ -102,4 +102,41 @@ class HttpClient {
   }
 }
 
-export { createCard, showElement, hideElement, getElementValue, showAlert, initializeForm, HttpClient };
+const renderApplications = () => {
+  const applicationList = document.getElementById('applications');
+  const storedApplications = JSON.parse(localStorage.getItem('courseApplications')) || [];
+
+  if (storedApplications.length === 0) {
+    applicationList.innerHTML = '<p>No course applications available.</p>';
+  } else {
+    storedApplications.forEach((application, index) => {
+      const applicationItem = createApplicationElement(application, index);
+      applicationList.appendChild(applicationItem);
+    });
+  }
+};
+
+const createApplicationElement = (application, index) => {
+  const applicationItem = document.createElement('div');
+  applicationItem.classList.add('application-item');
+  applicationItem.innerHTML = `
+    <p><strong>Application ${index + 1}:</strong></p>
+    <p><strong>Name:</strong> ${application.name}</p>
+    <p><strong>Payment Address:</strong> ${application.paymentAddress}</p>
+    <p><strong>Email:</strong> ${application.email}</p>
+    <p><strong>Phone Number:</strong> ${application.phone}</p>
+    <p><strong>Course Number:</strong> ${application.courseNumber}</p>
+  `;
+  return applicationItem;
+};
+
+export {
+  createCard,
+  showElement,
+  hideElement,
+  getElementValue,
+  showAlert,
+  initializeForm,
+  HttpClient,
+  renderApplications,
+};

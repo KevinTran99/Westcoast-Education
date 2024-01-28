@@ -11,7 +11,13 @@ async function addCourse(e) {
   e.preventDefault();
 
   const courseForm = document.getElementById('courseForm');
+
+  const coursesJson = await fetch('../courses.json');
+  const existingCourses = await coursesJson.json();
+  const nextId = existingCourses.courses.length + 1;
+
   const courseData = {
+    id: nextId,
     course: courseForm.course.value,
     courseNumber: courseForm.courseNumber.value,
     duration: courseForm.duration.value,

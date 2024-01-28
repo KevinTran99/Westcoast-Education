@@ -66,6 +66,7 @@ const initializeForm = () => {
     if (!isDuplicate) {
       existingData.push(formData);
       localStorage.setItem('courseApplications', JSON.stringify(existingData));
+      window.alert('Application successful');
       form.reset();
     } else {
       alert('This email and courseNumber combination has already been submitted.');
@@ -92,6 +93,7 @@ class HttpClient {
 
       if (response.ok) {
         const result = await response.json();
+        window.alert('Added course successfully');
         return result;
       } else {
         throw new Error(`${response.status} ${response.statusText}`);

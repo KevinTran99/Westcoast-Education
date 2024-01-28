@@ -1,0 +1,30 @@
+.applications {
+  margin: 70px auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: space-around;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.application-item {
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.application-item p {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

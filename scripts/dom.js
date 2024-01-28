@@ -17,7 +17,7 @@ const createImage = (imageUrl, id) => {
 
 const createCourseInfo = (course) => {
   const paragraph = document.createElement('p');
-  paragraph.innerHTML = `${course.course}<br>Location: ${course.location}<br>Duration: ${course.duration}<br>Course Number: ${course.courseNumber}<br>Starts from: ${course.courseDate}`;
+  paragraph.innerHTML = `${course.course}<br>Location: ${course.location}<br>Duration: ${course.duration}<br>Course Number: ${course.courseNumber}<br>Start Date: ${course.courseStart}<br>End Date: ${course.courseEnd}`;
   return paragraph;
 };
 
@@ -73,4 +73,33 @@ const initializeForm = () => {
   });
 };
 
-export { createCard, showElement, hideElement, getElementValue, showAlert, initializeForm };
+class HttpClient {
+  #url = '';
+
+  constructor(url) {
+    this.#url = url;
+  }
+
+  async add(data) {
+    try {
+      const response = await fetch(this.#url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        return result;
+      } else {
+        throw new Error(`${response.status} ${response.statusText}`);
+      }
+    } catch (error) {
+      throw new Error(`An error occurred in the add method: ${error}`);
+    }
+  }
+}
+
+export { createCard, showElement, hideElement, getElementValue, showAlert, initializeForm, HttpClient };
